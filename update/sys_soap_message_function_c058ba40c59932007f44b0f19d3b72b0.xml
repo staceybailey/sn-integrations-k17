@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x="http://www.service-now.com/x_snc_hhd_prototype">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <x:getKeys>
+         <!--Optional:-->
+         <active_until>${getKeys.active_until}</active_until>
+         <!--Optional:-->
+         <hhd_identifier>${getKeys.hhd_identifier}</hhd_identifier>
+         <!--Optional:-->
+         <status>${getKeys.status}</status>
+         <!--Optional:-->
+         <sys_created_by>${getKeys.sys_created_by}</sys_created_by>
+         <!--Optional:-->
+         <sys_created_on>${getKeys.sys_created_on}</sys_created_on>
+         <!--Optional:-->
+         <sys_mod_count>${getKeys.sys_mod_count}</sys_mod_count>
+         <!--Optional:-->
+         <sys_updated_by>${getKeys.sys_updated_by}</sys_updated_by>
+         <!--Optional:-->
+         <sys_updated_on>${getKeys.sys_updated_on}</sys_updated_on>
+         <!--Optional:-->
+         <system_name>${getKeys.system_name}</system_name>
+         <!--Optional:-->
+         <unlock_code>${getKeys.unlock_code}</unlock_code>
+         <!--Optional:-->
+         <__use_view>${getKeys.__use_view}</__use_view>
+         <!--Optional:-->
+         <__encoded_query>${getKeys.__encoded_query}</__encoded_query>
+         <!--Optional:-->
+         <__limit>${getKeys.__limit}</__limit>
+         <!--Optional:-->
+         <__first_row>${getKeys.__first_row}</__first_row>
+         <!--Optional:-->
+         <__last_row>${getKeys.__last_row}</__last_row>
+      </x:getKeys>
+   </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>getKeys</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>HHD Prototype Link [ getKeys ]</qualified_name>
+        <soap_action>http://www.service-now.com/x_snc_hhd_prototype/getKeys</soap_action>
+        <soap_endpoint>https://implementationbootcamp.service-now.com/x_snc_hhd_prototype.do?SOAP</soap_endpoint>
+        <soap_message display_value="HHD Prototype Link">5c387a40c59932007f44b0f19d3b729c</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-27 22:46:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c058ba40c59932007f44b0f19d3b72b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getKeys</sys_name>
+        <sys_package display_value="hhd" source="x_snc_hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_scope>
+        <sys_update_name>sys_soap_message_function_c058ba40c59932007f44b0f19d3b72b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-02-27 22:46:27</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

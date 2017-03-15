@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Update Unlock Codes Using SOAP Scheduled Job</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-02-28 18:43:21</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[try { 
+var gr = new GlideRecordSecure("x_snc_hhd_hhd");
+gr.addNullQuery('u_unlock_code');
+gr.query();
+while (gr.next()) {
+	try {
+		var s = new sn_ws.SOAPMessageV2('x_snc_hhd.HHD Prototype Link',
+		'getRecords');
+		s.setStringParameter('getRecords.hhd_identifier', gr.u_hhd_identifier);
+		var response = s.execute();
+		var responseBody = response.getBody();
+		var status = response.getStatusCode();
+		var xmlDoc = new XMLDocument2();
+		xmlDoc.parseXML(responseBody);
+		var unlock_code = xmlDoc.getNodeText("//unlock_code");
+		gr.u_unlock_code = unlock_code;
+		gr.update();
+	}
+	catch(ex) {
+		var message = ex.getMessage();
+		gs.info(message);
+	}
+}
+
+}
+catch(ex) { 
+ var message = ex.getMessage();
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-28 18:44:50</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>b44ac3d4c55d32007f44b0f19d3b7251</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update Unlock Codes Using SOAP Scheduled Job</sys_name>
+        <sys_package display_value="hhd" source="x_snc_hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_scope>
+        <sys_update_name>sysauto_script_b44ac3d4c55d32007f44b0f19d3b7251</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-02-28 18:49:04</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

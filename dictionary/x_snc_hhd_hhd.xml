@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="HHD" max_length="40" name="x_snc_hhd_hhd" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element label="In Maintenance" value="10"/>
+                <element label="In stock" value="6"/>
+                <element label="In transit" value="9"/>
+                <element label="In use" value="1"/>
+                <element label="Missing" value="8"/>
+                <element label="On order" value="2"/>
+                <element label="Retired" value="7"/>
+            </choice>
+        </element>
+        <element label="Active Until" max_length="40" name="u_active_until" type="glide_date"/>
+        <element display="true" label="HHD Identifier" max_length="40" name="u_hhd_identifier" type="string"/>
+        <element label="Prototype Evangelist" max_length="32" name="u_prototype_evangelist" reference="sys_user" type="reference"/>
+        <element label="System Name" max_length="40" name="u_system_name" type="string"/>
+        <element label="Unlock Code" max_length="40" name="u_unlock_code" type="string"/>
+        <index name="index">
+            <element name="u_hhd_identifier"/>
+        </index>
+        <index name="index2">
+            <element name="u_prototype_evangelist"/>
+        </index>
+    </element>
+</database>

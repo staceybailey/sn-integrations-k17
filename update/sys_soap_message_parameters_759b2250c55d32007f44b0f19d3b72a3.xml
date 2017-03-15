@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_parameters">
+    <sys_soap_message_parameters action="INSERT_OR_UPDATE">
+        <name>getRecords.hhd_identifier</name>
+        <soap_function display_value="getRecords">4458ba40c59932007f44b0f19d3b72ab</soap_function>
+        <sys_class_name>sys_soap_message_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-28 16:29:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>759b2250c55d32007f44b0f19d3b72a3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>getRecords.hhd_identifier</sys_name>
+        <sys_package display_value="hhd" source="x_snc_hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hhd">f1caa0e2b501b2007f44f72c9e5ed2c7</sys_scope>
+        <sys_update_name>sys_soap_message_parameters_759b2250c55d32007f44b0f19d3b72a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-02-28 16:29:26</sys_updated_on>
+        <type>string</type>
+        <value>HHD002</value>
+    </sys_soap_message_parameters>
+</record_update>
